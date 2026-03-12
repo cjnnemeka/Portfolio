@@ -77,7 +77,7 @@ export default function Contact() {
     <>
       <Header />
       <main style={{ minHeight: '100vh' }}>
-        <div style={{
+        <div className="responsive-grid responsive-padding" style={{
           display: 'grid',
           gridTemplateColumns: '2fr 3fr',
           gap: '80px',

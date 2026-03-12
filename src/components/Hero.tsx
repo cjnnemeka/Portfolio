@@ -35,7 +35,7 @@ export default function Hero() {
   ]
 
   return (
-    <section style={{
+    <section className="responsive-padding" style={{
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
@@ -82,7 +82,7 @@ export default function Hero() {
       />
 
       {/* Info row */}
-      <div style={{
+      <div className="responsive-flex" style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'flex-end',
@@ -114,6 +114,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeIn}
+          className="responsive-flex"
           style={{ display: 'flex', gap: '48px' }}
         >
           {[

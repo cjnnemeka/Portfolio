@@ -365,7 +365,7 @@ function DecisionCard({
       </h3>
 
       {/* Two-column grid */}
-      <div style={{
+      <div className="responsive-grid-2" style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: '0px',
@@ -519,7 +519,7 @@ export default function NoelXCaseStudy() {
       <main style={{ paddingTop: '160px' }}>
 
         {/* ━━━ HERO ━━━ */}
-        <section style={{ padding: '0 48px 80px 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px 80px 48px' }}>
           {/* Back link */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -605,6 +605,7 @@ export default function NoelXCaseStudy() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
+            className="responsive-grid-4"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
@@ -686,13 +687,14 @@ export default function NoelXCaseStudy() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+          className="responsive-padding"
           style={{ padding: '0 48px 120px 48px' }}
         >
           <ParallaxImage label="NoelX — Hero / Marketing Site Screenshot" aspect="16 / 8" src="/images/noelx/dashboard-overview.png" />
         </motion.section>
 
         {/* ━━━ THE PROBLEM ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px' }}>
               <motion.div variants={staggerChild}>
@@ -725,7 +727,7 @@ export default function NoelXCaseStudy() {
         <Divider />
 
         {/* ━━━ THE POSITIONING DECISION ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '64px' }}>
               <motion.div variants={staggerChild}>
@@ -749,7 +751,7 @@ export default function NoelXCaseStudy() {
             </div>
 
             {/* Three-layer system visual */}
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-3" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '20px',
@@ -827,7 +829,7 @@ export default function NoelXCaseStudy() {
         <Divider />
 
         {/* ━━━ KEY DESIGN DECISIONS ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -882,7 +884,7 @@ export default function NoelXCaseStudy() {
         <Divider />
 
         {/* ━━━ THE SOLUTION — SCREENS ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '64px' }}>
               <motion.div variants={staggerChild}>
@@ -918,7 +920,7 @@ export default function NoelXCaseStudy() {
         <Divider />
 
         {/* ━━━ AI INTEGRATION ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -959,7 +961,7 @@ export default function NoelXCaseStudy() {
               }}>
                 Classification Pipeline
               </h3>
-              <div style={{
+              <div className="responsive-grid-3" style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(3, 1fr)',
                 gap: '24px',
@@ -1057,7 +1059,7 @@ export default function NoelXCaseStudy() {
         <Divider />
 
         {/* ━━━ COMPLIANCE ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -1073,7 +1075,7 @@ export default function NoelXCaseStudy() {
               </motion.div>
             </div>
 
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-3" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '20px',
@@ -1150,7 +1152,7 @@ export default function NoelXCaseStudy() {
         <Divider />
 
         {/* ━━━ OUTCOME ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -1174,7 +1176,7 @@ export default function NoelXCaseStudy() {
             </div>
 
             {/* Key metrics */}
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-4" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
               gap: '20px',

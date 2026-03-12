@@ -44,9 +44,9 @@ export default function About() {
       <main style={{ paddingTop: '160px' }}>
 
         {/* ━━━ HERO ━━━ */}
-        <section style={{ padding: '0 48px 120px 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px 120px 48px' }}>
           {/* Hero flex: text left, photo right */}
-          <div style={{
+          <div className="responsive-flex" style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -113,6 +113,7 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
+              className="responsive-photo"
               style={{
                 width: '280px',
                 height: '280px',
@@ -142,6 +143,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+            className="responsive-grid-3"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
@@ -182,7 +184,7 @@ export default function About() {
         </section>
 
         {/* ━━━ ABOUT BLOCKS ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             {/* Block 1: WHO I AM */}
             <motion.div variants={staggerChild} style={{ maxWidth: '720px' }}>
@@ -266,7 +268,7 @@ export default function About() {
         }} />
 
         {/* ━━━ SKILLS & TOOLS ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <motion.div variants={staggerChild}>
               <p style={{
@@ -289,6 +291,7 @@ export default function About() {
                 borderColor: 'var(--border-hover)',
                 transition: { duration: 0.3 }
               }}
+              className="responsive-grid-2"
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
@@ -382,7 +385,7 @@ export default function About() {
         }} />
 
         {/* ━━━ EXPERIENCE ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <motion.div variants={staggerChild}>
               <p style={{

@@ -60,3 +60,76 @@ a {
 .screen-carousel::-webkit-scrollbar {
   display: none;
 }
+
+/* ── Mobile responsive overrides ───────────────── */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 16px 20px !important;
+  }
+
+  header nav {
+    gap: 20px !important;
+  }
+
+  /* Reduce top padding on main content */
+  main {
+    padding-top: 100px !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 80px 20px 32px 20px !important;
+  }
+
+  footer > div:last-child {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+  }
+
+  footer > div:first-child {
+    margin-bottom: 80px !important;
+  }
+
+  /* Responsive utility classes */
+  .responsive-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .responsive-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .responsive-grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .responsive-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .responsive-flex {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .responsive-padding {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .responsive-hide {
+    display: none !important;
+  }
+
+  .responsive-photo {
+    width: 180px !important;
+    height: 180px !important;
+  }
+}

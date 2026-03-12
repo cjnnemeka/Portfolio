@@ -24,7 +24,7 @@ export default function Header() {
         left: 0,
         right: 0,
         zIndex: 100,
-        padding: '28px 48px',
+        padding: '20px 48px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',

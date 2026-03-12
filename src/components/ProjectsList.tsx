@@ -7,7 +7,7 @@ import { projects } from '@/data/projects'
 
 export default function ProjectsList() {
   return (
-    <section id="work" style={{
+    <section id="work" className="responsive-padding" style={{
       padding: '160px 48px 120px 48px',
     }}>
       {/* Section header */}
@@ -70,6 +70,7 @@ function ProjectRow({ project, index }: { project: typeof projects[number]; inde
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
+        className="responsive-grid"
         style={{
           display: 'grid',
           gridTemplateColumns: '1.1fr 1fr',

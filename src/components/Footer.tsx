@@ -11,7 +11,7 @@ export default function Footer() {
   const [emailHovered, setEmailHovered] = useState(false)
 
   return (
-    <footer id="contact" style={{
+    <footer id="contact" className="responsive-padding" style={{
       padding: '160px 48px 40px 48px',
     }}>
       {/* CTA section */}

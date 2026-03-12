@@ -340,7 +340,7 @@ function DecisionCard({
       </h3>
 
       {/* Two-column grid */}
-      <div style={{
+      <div className="responsive-grid-2" style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: '0px',
@@ -490,7 +490,7 @@ export default function ClovrCaseStudy() {
       <main style={{ paddingTop: '160px' }}>
 
         {/* ━━━ HERO ━━━ */}
-        <section style={{ padding: '0 48px 80px 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px 80px 48px' }}>
           {/* Back link */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -575,6 +575,7 @@ export default function ClovrCaseStudy() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
+            className="responsive-grid-4"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
@@ -629,13 +630,14 @@ export default function ClovrCaseStudy() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+          className="responsive-padding"
           style={{ padding: '0 48px 120px 48px' }}
         >
           <ParallaxImage label="Clovr — Dashboard Overview" aspect="16 / 8" src="/images/Clovr/Free_MacBook_Pro_1.png" />
         </motion.section>
 
         {/* ━━━ 01 — THE PROBLEM ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px' }}>
               <motion.div variants={staggerChild}>
@@ -681,7 +683,7 @@ export default function ClovrCaseStudy() {
         <Divider />
 
         {/* ━━━ 02 — RESEARCH & DISCOVERY ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -698,7 +700,7 @@ export default function ClovrCaseStudy() {
             </div>
 
             {/* Finding cards */}
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-3" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '20px',
@@ -776,7 +778,7 @@ export default function ClovrCaseStudy() {
         <Divider />
 
         {/* ━━━ 03 — KEY DESIGN DECISIONS ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -831,7 +833,7 @@ export default function ClovrCaseStudy() {
         <Divider />
 
         {/* ━━━ 04 — THE SOLUTION ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '64px' }}>
               <motion.div variants={staggerChild}>
@@ -868,7 +870,7 @@ export default function ClovrCaseStudy() {
         <Divider />
 
         {/* ━━━ 05 — INFORMATION ARCHITECTURE ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -884,7 +886,7 @@ export default function ClovrCaseStudy() {
               </motion.div>
             </div>
 
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-3" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '20px',
@@ -960,7 +962,7 @@ export default function ClovrCaseStudy() {
         <Divider />
 
         {/* ━━━ 06 — COMPONENT PATTERNS ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -976,7 +978,7 @@ export default function ClovrCaseStudy() {
               </motion.div>
             </div>
 
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-3" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '20px',
@@ -1050,7 +1052,7 @@ export default function ClovrCaseStudy() {
         <Divider />
 
         {/* ━━━ 07 — OUTCOME & REFLECTION ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -1069,7 +1071,7 @@ export default function ClovrCaseStudy() {
             </div>
 
             {/* Key metrics */}
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-4" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
               gap: '20px',
@@ -1162,7 +1164,7 @@ export default function ClovrCaseStudy() {
         </section>
 
         {/* ━━━ NEXT PROJECT ━━━ */}
-        <section style={{
+        <section className="responsive-padding" style={{
           padding: '120px 48px 0 48px',
           borderTop: '1px solid var(--border)',
           marginTop: '120px',

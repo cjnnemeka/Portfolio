@@ -21,9 +21,18 @@ export default function ScreenCarousel({ screens, accentColor }: ScreenCarouselP
   const [isDragging, setIsDragging] = useState(false)
   const [startX, setStartX] = useState(0)
   const [scrollLeft, setScrollLeft] = useState(0)
-
-  const cardWidth = 640 // px width of each card
+  const [cardWidth, setCardWidth] = useState(640)
   const cardGap = 24  // gap between cards
+
+  // Responsive card width
+  useEffect(() => {
+    const updateWidth = () => {
+      setCardWidth(window.innerWidth < 768 ? Math.min(window.innerWidth - 56, 400) : 640)
+    }
+    updateWidth()
+    window.addEventListener('resize', updateWidth)
+    return () => window.removeEventListener('resize', updateWidth)
+  }, [])
 
   // Update current index on scroll
   useEffect(() => {
@@ -75,7 +84,7 @@ export default function ScreenCarousel({ screens, accentColor }: ScreenCarouselP
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
     >
       {/* Header row: arrows + counter */}
-      <div style={{
+      <div className="responsive-padding" style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',

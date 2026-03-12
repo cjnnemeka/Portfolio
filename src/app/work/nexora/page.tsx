@@ -338,7 +338,7 @@ function DecisionCard({
       </h3>
 
       {/* Two-column grid */}
-      <div style={{
+      <div className="responsive-grid-2" style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: '0px',
@@ -488,7 +488,7 @@ export default function NexoraCaseStudy() {
       <main style={{ paddingTop: '160px' }}>
 
         {/* ━━━ HERO ━━━ */}
-        <section style={{ padding: '0 48px 80px 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px 80px 48px' }}>
           {/* Back link */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -573,7 +573,8 @@ export default function NexoraCaseStudy() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-            style={{
+            className="responsive-grid-4"
+          style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
               gap: '32px',
@@ -627,13 +628,14 @@ export default function NexoraCaseStudy() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+          className="responsive-padding"
           style={{ padding: '0 48px 120px 48px' }}
         >
           <ParallaxImage label="Nexora — Dashboard Overview" aspect="16 / 8" src="/images/Nexora/Frame 360.png" />
         </motion.section>
 
         {/* ━━━ 01 — THE PROBLEM ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px' }}>
               <motion.div variants={staggerChild}>
@@ -679,7 +681,7 @@ export default function NexoraCaseStudy() {
         <Divider />
 
         {/* ━━━ 02 — RESEARCH & DISCOVERY ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -696,7 +698,7 @@ export default function NexoraCaseStudy() {
             </div>
 
             {/* Research findings cards */}
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-3" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '20px',
@@ -775,7 +777,7 @@ export default function NexoraCaseStudy() {
         <Divider />
 
         {/* ━━━ 03 — KEY DESIGN DECISIONS ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -830,7 +832,7 @@ export default function NexoraCaseStudy() {
         <Divider />
 
         {/* ━━━ 04 — THE SOLUTION ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '64px' }}>
               <motion.div variants={staggerChild}>
@@ -866,7 +868,7 @@ export default function NexoraCaseStudy() {
         <Divider />
 
         {/* ━━━ 05 — INFORMATION ARCHITECTURE ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -882,7 +884,7 @@ export default function NexoraCaseStudy() {
               </motion.div>
             </div>
 
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-3" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '20px',
@@ -958,7 +960,7 @@ export default function NexoraCaseStudy() {
         <Divider />
 
         {/* ━━━ 06 — DASHBOARD DESIGN PHILOSOPHY ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -975,7 +977,7 @@ export default function NexoraCaseStudy() {
             </div>
 
             {/* 2-column feature breakdown */}
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-2" style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
               gap: '20px',
@@ -1082,7 +1084,7 @@ export default function NexoraCaseStudy() {
         <Divider />
 
         {/* ━━━ 07 — COMPONENT DESIGN SYSTEM ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -1098,7 +1100,7 @@ export default function NexoraCaseStudy() {
               </motion.div>
             </div>
 
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-3" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '20px',
@@ -1172,7 +1174,7 @@ export default function NexoraCaseStudy() {
         <Divider />
 
         {/* ━━━ 08 — OUTCOME & REFLECTION ━━━ */}
-        <section style={{ padding: '0 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '720px', marginBottom: '48px' }}>
               <motion.div variants={staggerChild}>
@@ -1184,7 +1186,7 @@ export default function NexoraCaseStudy() {
             </div>
 
             {/* Key metrics */}
-            <motion.div variants={staggerChild} style={{
+            <motion.div variants={staggerChild} className="responsive-grid-4" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
               gap: '20px',
@@ -1277,7 +1279,7 @@ export default function NexoraCaseStudy() {
         </section>
 
         {/* ━━━ NEXT PROJECT ━━━ */}
-        <section style={{
+        <section className="responsive-padding" style={{
           padding: '120px 48px 0 48px',
           borderTop: '1px solid var(--border)',
           marginTop: '120px',
