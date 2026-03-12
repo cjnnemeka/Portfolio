@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 
 const links = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/michaelihenacho/' },
-  { label: 'Resume', href: '#' },
 ]
 
 export default function Footer() {
