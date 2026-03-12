@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code
+.claude/
+
+# build docs
+/ABOUT_CONTACT_BUILD.md
+/CLOVR_CASESTUDY_BUILD.md
+/CONTACT_PAGE_BUILD.md
+/DECISION_CARDS_REDESIGN.md
+/HOMEPAGE_BUILD.md
+/IMAGE_GALLERY_ENHANCEMENT.md
+/NEXORA_CASESTUDY_BUILD.md
