@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 
 const links = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/michaelihenacho/' },
+  { label: 'CV', href: '/Michael_Ihenacho_CV.pdf' },
 ]
 
 export default function Footer() {
@@ -74,6 +75,8 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 fontFamily: 'var(--font-body)',
                 fontSize: '0.8125rem',
