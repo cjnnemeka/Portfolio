@@ -44,8 +44,16 @@ export default function ProjectsList() {
         </span>
       </motion.div>
 
-      {/* Project list */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
+      {/* Project grid — 2×2 desktop, single column mobile */}
+      <div
+        className="responsive-grid-2"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          columnGap: '48px',
+          rowGap: '0px',
+        }}
+      >
         {projects.map((project, index) => (
           <ProjectRow key={project.slug} project={project} index={index} />
         ))}

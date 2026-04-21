@@ -1,5 +1,16 @@
 export const projects = [
   {
+    slug: 'keel',
+    title: 'Keel',
+    subtitle: 'Governance for AI-Authored Design Systems',
+    description: 'A governance layer that sits between a design system and the AI tools consuming it — auditing what AI ships rather than generating more.',
+    role: 'Product Designer & Builder',
+    year: '2026',
+    tags: ['Product Design', 'AI-Native', 'Design Systems', 'Developer Tools'],
+    color: '#1D4ED8',
+    thumbnail: '/images/Keel/drift-dashboard-light.png',
+  },
+  {
     slug: 'noelx',
     title: 'NoelX',
     subtitle: 'AI-Powered Patient Recovery System',

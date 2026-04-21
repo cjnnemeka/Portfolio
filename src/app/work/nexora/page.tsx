@@ -1284,7 +1284,7 @@ export default function NexoraCaseStudy() {
           borderTop: '1px solid var(--border)',
           marginTop: '120px',
         }}>
-          <Link href="/work/noelx" style={{ textDecoration: 'none', display: 'block' }}>
+          <Link href="/work/keel" style={{ textDecoration: 'none', display: 'block' }}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1299,7 +1299,7 @@ export default function NexoraCaseStudy() {
               }}
               onMouseEnter={(e) => {
                 const title = e.currentTarget.querySelector('[data-next-title]') as HTMLElement
-                if (title) title.style.color = '#D4A843'
+                if (title) title.style.color = '#1D4ED8'
               }}
               onMouseLeave={(e) => {
                 const title = e.currentTarget.querySelector('[data-next-title]') as HTMLElement
@@ -1329,7 +1329,7 @@ export default function NexoraCaseStudy() {
                     transition: 'color 0.5s ease',
                   }}
                 >
-                  NoelX
+                  Keel
                 </h2>
                 <p style={{
                   fontFamily: 'var(--font-body)',
@@ -1338,7 +1338,7 @@ export default function NexoraCaseStudy() {
                   color: 'var(--text-secondary)',
                   marginTop: '8px',
                 }}>
-                  AI-Powered Patient Recovery System
+                  Governance for AI-Authored Design Systems
                 </p>
               </div>
               <span style={{

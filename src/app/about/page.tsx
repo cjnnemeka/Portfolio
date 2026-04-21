@@ -208,6 +208,16 @@ export default function About() {
               }}>
                 I&rsquo;m a product designer who also builds. I use AI tools like Claude Code to go from design to working software, which means I can prototype, test, and ship without waiting on a dev team. NoelX is the best example. I designed the product, built the frontend and backend, integrated the AI pipeline, and deployed it. It&rsquo;s live at noelx.co.
               </p>
+              <p style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '1.125rem',
+                fontWeight: 400,
+                lineHeight: 1.7,
+                color: 'var(--text-secondary)',
+                marginTop: '24px',
+              }}>
+                NoelX is the case for &ldquo;can this person ship a full product end-to-end for a real market?&rdquo; Keel is the case for &ldquo;can this person read where the discipline is going and stake out a thesis before the category consolidates?&rdquo; Two different questions. Both need answers.
+              </p>
             </motion.div>
 
             {/* Block 2: HOW I WORK */}
