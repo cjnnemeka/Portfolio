@@ -199,7 +199,7 @@ export default function Contact() {
                   fontWeight: 400,
                   color: 'var(--text-primary)',
                 }}>
-                  Houston, TX → Open to Relocation
+                  US → Ireland
                 </p>
               </motion.div>
 

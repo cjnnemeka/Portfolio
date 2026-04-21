@@ -16,7 +16,7 @@ export const projects = [
     subtitle: 'AI-Powered Patient Recovery System',
     description: 'Designed and built a three-layer patient retention infrastructure for medical spas — from problem identification through full-stack implementation.',
     role: 'Product Designer & Developer',
-    year: '2024–2025',
+    year: '2025',
     tags: ['Product Design', 'AI/ML', 'Full-Stack', 'Healthcare'],
     color: '#D4A843',
     thumbnail: '/images/noelx/MacBook_Mockup_thumb.png',

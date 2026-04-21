@@ -103,9 +103,9 @@ export default function Hero() {
             maxWidth: '520px',
           }}
         >
-          Product designer with full-stack engineering capability.
-          I ship AI-powered SaaS products from concept to production —
-          not just the screens, the entire system.
+          Senior product designer for AI-native SaaS. I use AI tooling
+          to take the products I design all the way to production —
+          so what launches is what was designed.
         </motion.p>
 
         {/* Right: metadata */}
@@ -119,7 +119,7 @@ export default function Hero() {
         >
           {[
             { label: 'Status', value: 'Available' },
-            { label: 'Location', value: 'Houston → EU' },
+            { label: 'Location', value: 'US → Ireland' },
             { label: 'Citizenship', value: 'EU Citizen' },
           ].map((item) => (
             <div key={item.label} style={{ textAlign: 'right' }}>

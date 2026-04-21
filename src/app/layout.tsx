@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Michael Ihenacho — Product Designer",
-  description: "Product Designer who builds. I ship AI-powered SaaS products from concept to production. EU citizen, available for opportunities.",
+  description: "Senior product designer for AI-native SaaS. I use AI tooling to take the products I design all the way to production. EU citizen, available for opportunities.",
 };
 
 export default function RootLayout({

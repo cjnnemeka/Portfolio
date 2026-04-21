@@ -645,12 +645,18 @@ export default function NoelXCaseStudy() {
             ))}
           </motion.div>
 
-          {/* View Live Site */}
+          {/* Dual CTA: live site + design system */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
-            style={{ marginTop: '32px' }}
+            style={{
+              marginTop: '32px',
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '14px',
+              alignItems: 'center',
+            }}
           >
             <a
               href="https://noelx.co"
@@ -662,14 +668,51 @@ export default function NoelXCaseStudy() {
                 fontWeight: 500,
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#D4A843',
-                transition: 'opacity 0.3s ease',
+                color: '#FFFFFF',
+                background: '#D4A843',
+                padding: '13px 20px',
+                borderRadius: '8px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                transition: 'transform 0.25s ease, background-color 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#BD9036'
+                e.currentTarget.style.transform = 'translateY(-1px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = '#D4A843'
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
             >
-              VIEW LIVE SITE →
+              View live site
+              <span style={{ fontSize: '14px' }}>↗</span>
             </a>
+            <Link
+              href="/work/noelx/system"
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.75rem',
+                fontWeight: 500,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: '#D4A843',
+                background: 'transparent',
+                border: '1px solid #D4A843',
+                padding: '12px 20px',
+                borderRadius: '8px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                transition: 'background-color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(212, 168, 67, 0.12)')}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+            >
+              Explore the design system
+              <span style={{ fontSize: '14px' }}>→</span>
+            </Link>
           </motion.div>
 
           {/* Tech stack marquee */}
@@ -878,6 +921,33 @@ export default function NoelXCaseStudy() {
                 />
               </motion.div>
             </div>
+
+            {/* Subtle bridge link to design system */}
+            <motion.div variants={staggerChild} style={{ marginTop: '48px' }}>
+              <Link
+                href="/work/noelx/system"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: '#D4A843',
+                  padding: '12px 18px',
+                  border: '1px solid #D4A843',
+                  borderRadius: '8px',
+                  transition: 'background-color 0.3s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(212, 168, 67, 0.12)')}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+              >
+                See how these decisions shipped — explore the design system
+                <span style={{ fontSize: '14px' }}>→</span>
+              </Link>
+            </motion.div>
           </StaggerContainer>
         </section>
 
@@ -913,6 +983,77 @@ export default function NoelXCaseStudy() {
                   { label: 'Marketing Site', description: 'Conversion-focused landing page with RetentionScore lead magnet', src: '/images/noelx/marketing-site.png' },
                 ]}
               />
+            </motion.div>
+
+            {/* CTA — design system reference */}
+            <motion.div
+              variants={staggerChild}
+              style={{
+                marginTop: '56px',
+                padding: '32px 36px',
+                background: 'linear-gradient(180deg, rgba(212, 168, 67, 0.10) 0%, rgba(212, 168, 67, 0.02) 100%)',
+                border: '1px solid rgba(212, 168, 67, 0.40)',
+                borderRadius: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '32px',
+                flexWrap: 'wrap',
+              }}
+            >
+              <div style={{ maxWidth: '560px' }}>
+                <p style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.6875rem',
+                  fontWeight: 500,
+                  color: '#D4A843',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  marginBottom: '10px',
+                }}>
+                  The atoms behind these screens
+                </p>
+                <p style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(1.25rem, 2.2vw, 1.625rem)',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.3,
+                  color: 'var(--text-primary)',
+                }}>
+                  Every screen above is built from a documented system — warm neutrals, an amber brand, six classification roles, a dark sidebar anchoring a light canvas. See it in full.
+                </p>
+              </div>
+              <Link
+                href="/work/noelx/system"
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  color: '#FFFFFF',
+                  background: '#D4A843',
+                  padding: '14px 22px',
+                  borderRadius: '8px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  flexShrink: 0,
+                  transition: 'transform 0.25s ease, background-color 0.3s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#BD9036'
+                  e.currentTarget.style.transform = 'translateY(-1px)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#D4A843'
+                  e.currentTarget.style.transform = 'translateY(0)'
+                }}
+              >
+                Open design system
+                <span style={{ fontSize: '14px' }}>→</span>
+              </Link>
             </motion.div>
           </StaggerContainer>
         </section>

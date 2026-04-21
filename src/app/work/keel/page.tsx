@@ -441,6 +441,39 @@ function FixedSectionIndex({ heroInView }: { heroInView: boolean }) {
           </button>
         )
       })}
+
+      {/* Persistent link to design system reference */}
+      <Link
+        href="/work/keel/system"
+        aria-label="Jump to the full design system reference page"
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '10px',
+          marginTop: '14px',
+          paddingTop: '18px',
+          paddingLeft: '2px',
+          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+          fontFamily: 'var(--font-mono)',
+          fontSize: '10px',
+          fontWeight: 500,
+          textTransform: 'uppercase',
+          letterSpacing: '0.12em',
+          color: ACCENT,
+          transition: 'opacity 0.2s ease',
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
+        onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+      >
+        <span style={{
+          width: '6px',
+          height: '6px',
+          borderRadius: '50%',
+          background: ACCENT,
+          flexShrink: 0,
+        }} />
+        Design system →
+      </Link>
     </nav>
   )
 }
@@ -1126,12 +1159,18 @@ export default function KeelCaseStudy() {
             ))}
           </motion.div>
 
-          {/* Live demo link chip */}
+          {/* Dual CTA: live demo + design system */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
-            style={{ marginTop: '32px' }}
+            style={{
+              marginTop: '32px',
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '14px',
+              alignItems: 'center',
+            }}
           >
             <a
               href={DEMO_URL}
@@ -1143,14 +1182,51 @@ export default function KeelCaseStudy() {
                 fontWeight: 500,
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: ACCENT,
-                transition: 'opacity 0.3s ease',
+                color: '#FFFFFF',
+                background: ACCENT,
+                padding: '13px 20px',
+                borderRadius: '8px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                transition: 'transform 0.25s ease, background-color 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#1E40AF'
+                e.currentTarget.style.transform = 'translateY(-1px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = ACCENT
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
             >
-              VIEW LIVE DEMO →
+              View live demo
+              <span style={{ fontSize: '14px' }}>↗</span>
             </a>
+            <Link
+              href="/work/keel/system"
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.75rem',
+                fontWeight: 500,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: ACCENT,
+                background: 'transparent',
+                border: `1px solid ${ACCENT}`,
+                padding: '12px 20px',
+                borderRadius: '8px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                transition: 'background-color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(29, 78, 216, 0.12)')}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+            >
+              Explore the design system
+              <span style={{ fontSize: '14px' }}>→</span>
+            </Link>
           </motion.div>
 
           {/* Tech stack marquee */}
@@ -1458,6 +1534,7 @@ export default function KeelCaseStudy() {
                 gap: '24px',
               }}
             >
+              {/* See full system link will render under the grid */}
               {[
                 {
                   label: 'Typography',
@@ -1523,6 +1600,33 @@ export default function KeelCaseStudy() {
                   </p>
                 </div>
               ))}
+            </motion.div>
+
+            {/* CTA — full design system page */}
+            <motion.div variants={staggerChild} style={{ marginTop: '40px' }}>
+              <Link
+                href="/work/keel/system"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  color: ACCENT,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  padding: '12px 18px',
+                  border: `1px solid ${ACCENT}`,
+                  borderRadius: '8px',
+                  transition: 'background-color 0.3s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(29, 78, 216, 0.10)')}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+              >
+                See the complete component system
+                <span style={{ fontSize: '14px' }}>→</span>
+              </Link>
             </motion.div>
           </StaggerContainer>
         </section>
@@ -1675,6 +1779,81 @@ export default function KeelCaseStudy() {
               ]}
             />
           </div>
+
+          {/* CTA — design system reference */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="keel-artifact-system-cta"
+            style={{
+              marginTop: '72px',
+              padding: '32px 36px',
+              background: 'linear-gradient(180deg, rgba(29, 78, 216, 0.08) 0%, rgba(29, 78, 216, 0.02) 100%)',
+              border: `1px solid rgba(29, 78, 216, 0.35)`,
+              borderRadius: '16px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '32px',
+              flexWrap: 'wrap',
+            }}
+          >
+            <div style={{ maxWidth: '560px' }}>
+              <p style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.6875rem',
+                fontWeight: 500,
+                color: ACCENT,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                marginBottom: '10px',
+              }}>
+                The atoms behind these screens
+              </p>
+              <p style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.25rem, 2.2vw, 1.625rem)',
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                lineHeight: 1.3,
+                color: 'var(--text-primary)',
+              }}>
+                Every surface above is built from a documented design system — tokens, components, light/dark parity. See it in full.
+              </p>
+            </div>
+            <Link
+              href="/work/keel/system"
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.75rem',
+                fontWeight: 500,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: '#FFFFFF',
+                background: ACCENT,
+                padding: '14px 22px',
+                borderRadius: '8px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                flexShrink: 0,
+                transition: 'transform 0.25s ease, background-color 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#1E40AF'
+                e.currentTarget.style.transform = 'translateY(-1px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = ACCENT
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
+            >
+              Open design system
+              <span style={{ fontSize: '14px' }}>→</span>
+            </Link>
+          </motion.div>
 
           {/* Demo disclosure block */}
           <div

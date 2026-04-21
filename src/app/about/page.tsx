@@ -154,7 +154,7 @@ export default function About() {
           >
             {[
               { label: 'Citizenship', value: 'EU Citizen (Italian Passport)', accent: true },
-              { label: 'Location', value: 'Houston, TX → Open to Relocation', accent: false },
+              { label: 'Location', value: 'US → Ireland', accent: false },
               { label: 'Availability', value: 'Immediately', accent: false },
             ].map((item) => (
               <div key={item.label}>
