@@ -17,6 +17,8 @@ export default function ImageLightbox({ src, alt, style, className }: ImageLight
     setOpen(true)
     requestAnimationFrame(() => setVisible(true))
     document.body.style.overflow = 'hidden'
+    // Pause Lenis smooth scroll — otherwise wheel events oscillate against the locked body and blink the page.
+    window.__lenis?.stop()
   }
 
   const closeLightbox = useCallback(() => {
@@ -24,6 +26,7 @@ export default function ImageLightbox({ src, alt, style, className }: ImageLight
     setTimeout(() => {
       setOpen(false)
       document.body.style.overflow = ''
+      window.__lenis?.start()
     }, 200)
   }, [])
 
