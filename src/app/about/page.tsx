@@ -301,7 +301,7 @@ export default function About() {
                 borderColor: 'var(--border-hover)',
                 transition: { duration: 0.3 }
               }}
-              className="responsive-grid-2"
+              className="responsive-grid-2 about-skills-card"
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
@@ -434,6 +434,7 @@ export default function About() {
               <motion.div
                 key={entry.year}
                 variants={staggerChild}
+                className="about-exp-row"
                 style={{
                   display: 'flex',
                   gap: '48px',
@@ -441,7 +442,7 @@ export default function About() {
                   borderBottom: i < arr.length - 1 ? '1px solid var(--border)' : 'none',
                 }}
               >
-                <p style={{
+                <p className="about-exp-year" style={{
                   fontFamily: 'var(--font-mono)',
                   fontSize: '0.75rem',
                   fontWeight: 500,

@@ -132,4 +132,41 @@ a {
     width: 180px !important;
     height: 180px !important;
   }
+
+  /* Hero metadata items: stop right-aligning once stacked. */
+  .hero-meta-item {
+    text-align: left !important;
+  }
+
+  /* ScreenCarousel chrome: desktop-sized padding is too wide on narrow viewports. */
+  .screen-carousel {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* About — experience timeline: stack year above the content. */
+  .about-exp-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .about-exp-year {
+    width: auto !important;
+  }
+
+  /* About — skills card: 48px padding eats most of a 390px viewport. */
+  .about-skills-card {
+    padding: 28px !important;
+    gap: 32px !important;
+  }
+
+  /* Contact — success confirmation card. */
+  .contact-success-card {
+    padding: 48px 24px !important;
+  }
+
+  /* Image lightbox: give the expanded image nearly the full viewport. */
+  .lightbox-expanded {
+    max-width: 95vw !important;
+    max-height: 88vh !important;
+  }
 }

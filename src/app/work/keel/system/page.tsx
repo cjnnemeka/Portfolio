@@ -578,8 +578,10 @@ function HealthScore() {
 
 function TableRowDemo() {
   return (
+    <div style={{ width: '100%', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
     <div style={{
       width: '100%',
+      minWidth: '480px',
       maxWidth: '560px',
       background: 'var(--bg-card)',
       border: '1px solid var(--border)',
@@ -633,6 +635,7 @@ function TableRowDemo() {
           </span>
         </div>
       ))}
+    </div>
     </div>
   )
 }

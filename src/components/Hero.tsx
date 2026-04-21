@@ -122,7 +122,7 @@ export default function Hero() {
             { label: 'Location', value: 'US → Ireland' },
             { label: 'Citizenship', value: 'EU Citizen' },
           ].map((item) => (
-            <div key={item.label} style={{ textAlign: 'right' }}>
+            <div key={item.label} className="hero-meta-item" style={{ textAlign: 'right' }}>
               <p style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: '0.625rem',

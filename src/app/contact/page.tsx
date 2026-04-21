@@ -51,7 +51,7 @@ export default function Contact() {
     borderRadius: '8px',
     color: 'var(--text-primary)',
     fontFamily: 'var(--font-body)',
-    fontSize: '0.9375rem',
+    fontSize: '1rem', // 16px minimum prevents iOS Safari auto-zoom on focus.
     outline: 'none',
     transition: 'border-color 0.3s ease',
   }
@@ -249,6 +249,7 @@ export default function Contact() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="contact-success-card"
                 style={{
                   padding: '80px 48px',
                   backgroundColor: 'var(--bg-card)',

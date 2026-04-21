@@ -442,7 +442,8 @@ function Sparkline({ data, color, width = 80, height = 32 }: { data: number[]; c
 function StatCard() {
   return (
     <div style={{
-      width: '260px',
+      width: '100%',
+      maxWidth: '260px',
       backgroundColor: PRODUCT_SURFACE,
       border: `1px solid ${PRODUCT_BORDER}`,
       borderRadius: '12px',
@@ -691,8 +692,10 @@ function ActivityFeedItem() {
 
 function CampaignTableRow() {
   return (
+    <div style={{ width: '100%', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
     <div style={{
       width: '100%',
+      minWidth: '560px',
       maxWidth: '640px',
       backgroundColor: PRODUCT_SURFACE,
       border: `1px solid ${PRODUCT_BORDER}`,
@@ -762,6 +765,7 @@ function CampaignTableRow() {
           <span style={{ textAlign: 'right', color: AMBER_700, fontWeight: 600 }}>{row.rate}</span>
         </div>
       ))}
+    </div>
     </div>
   )
 }
@@ -843,7 +847,7 @@ function TopBar() {
         <p style={{ fontSize: '12px', color: PRODUCT_TEXT_TERTIARY, marginTop: '2px' }}>Glow Aesthetics · February 2026</p>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-        <div style={{
+        <div className="noelx-ds-topbar-search" style={{
           display: 'flex',
           alignItems: 'center',
           gap: '8px',
@@ -1692,6 +1696,7 @@ export default function NoelXDesignSystem() {
           .noelx-ds-shadows { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 768px) {
+          .noelx-ds-topbar-search { display: none !important; }
           .noelx-ds-hero { padding: 0 20px 64px 20px !important; }
           .noelx-ds-section { padding: 72px 20px !important; }
           .noelx-ds-back-section {

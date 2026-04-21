@@ -105,6 +105,7 @@ export default function ImageLightbox({ src, alt, style, className }: ImageLight
             src={src}
             alt={alt}
             onClick={(e) => e.stopPropagation()}
+            className="lightbox-expanded"
             style={{
               maxWidth: '80vw',
               maxHeight: '80vh',
