@@ -8,7 +8,7 @@ export const projects = [
     year: '2026',
     tags: ['Product Design', 'AI-Native', 'Design Systems', 'Developer Tools'],
     color: '#1D4ED8',
-    thumbnail: '/images/Keel/drift-dashboard-light.png',
+    thumbnail: '/images/Keel/thumbnail.png',
   },
   {
     slug: 'noelx',
