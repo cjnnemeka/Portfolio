@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Lenis from 'lenis'
 
 declare global {
@@ -10,6 +11,8 @@ declare global {
 }
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -33,6 +36,11 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       }
     }
   }, [])
+
+  // Reset scroll to top on route change — Lenis otherwise preserves the previous page's position.
+  useEffect(() => {
+    window.__lenis?.scrollTo(0, { immediate: true, force: true })
+  }, [pathname])
 
   return <>{children}</>
 }

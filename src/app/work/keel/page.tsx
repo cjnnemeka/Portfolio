@@ -1172,10 +1172,8 @@ export default function KeelCaseStudy() {
               alignItems: 'center',
             }}
           >
-            <a
-              href={DEMO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/work/keel/system"
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: '0.75rem',
@@ -1200,11 +1198,13 @@ export default function KeelCaseStudy() {
                 e.currentTarget.style.transform = 'translateY(0)'
               }}
             >
-              View live demo
-              <span style={{ fontSize: '14px' }}>↗</span>
-            </a>
-            <Link
-              href="/work/keel/system"
+              Explore the design system
+              <span style={{ fontSize: '14px' }}>→</span>
+            </Link>
+            <a
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: '0.75rem',
@@ -1224,9 +1224,9 @@ export default function KeelCaseStudy() {
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(29, 78, 216, 0.12)')}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
             >
-              Explore the design system
-              <span style={{ fontSize: '14px' }}>→</span>
-            </Link>
+              View live demo
+              <span style={{ fontSize: '14px' }}>↗</span>
+            </a>
           </motion.div>
 
           {/* Tech stack marquee */}
