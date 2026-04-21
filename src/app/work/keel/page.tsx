@@ -1391,6 +1391,139 @@ export default function KeelCaseStudy() {
               imageSrc="/images/Keel/parity-failing-2-light.png"
               imageAlt="Parity check failing — whitelist linting catches invented tokens and off-scale spacing"
             />
+
+            <ProgressiveDecisionCard
+              challenge="The design-systems tool genre is Apple-minimal. Sparse dashboards, generous whitespace, one hero metric per screen. The portfolio instinct — and the quality bar I set against NoelX — was to match that aesthetic. Minimalism reads as refined. Density reads as administrative."
+              decision="Design Keel dense. Ten drift rows visible on the dashboard before the user scrolls, not three. Three columns simultaneously open on the detail view, not sequenced. Twenty-three parity rules on one audit screen, not paginated or accordioned."
+              result="Keel's user is a design systems lead reviewing fifteen AI-authored pull requests a day. They don't want two clicks to know whether something urgent is in the queue. For them, density is an affordance, not clutter. An early sparse prototype read as “Keel has nothing to tell you right now” — the opposite of what the tool is for. The dense version reads as “Keel has been watching.” The harder craft call was arguing against the default aesthetic when the default aesthetic was wrong for this user. Minimalism in a review tool is hostility disguised as taste."
+              imageSrc="/images/Keel/drift-dashboard-dark.png"
+              imageAlt="Keel drift dashboard — dense by design, ten rows visible before scroll"
+            />
+
+            <ProgressiveDecisionCard
+              challenge="Policy configuration is a permissions-shaped interface. The genre default — AWS IAM, role hierarchies, nested rule trees, permission matrices — is administrative, not decisive. My reference bar for this surface was explicit: must feel like Linear or Stripe, not AWS IAM."
+              decision="Flat list of actions. Three trust levels as a segmented control per row. No role hierarchies, no permission grids, no grouped accordions. One screen answers one question — what auto-merges today, what goes to draft PR, what stays suggest-only."
+              result="Permissions matrices fail because the user doesn't know where to look. A flat list forces the UI to answer a specific question, and that forced me into a specific information architecture — actions are rows, trust is the axis, the tool's job is to make “raise the trust on this row” a two-click interaction. The visual simplicity wasn't a stylistic choice. It was a consequence of triaging the user's decision down to a single question. When the IA is right, the visual language is almost free. Simplicity isn't a style — it's the output of clarity."
+              imageSrc="/images/Keel/policy-light.png"
+              imageAlt="Trust-level policy engine — flat list, segmented control per row"
+            />
+          </StaggerContainer>
+        </section>
+
+        <Divider />
+
+        {/* ━━━ VISUAL LANGUAGE (interstitial, unnumbered) ━━━ */}
+        <section className="responsive-padding keel-visual-language" style={{ padding: '0 48px' }}>
+          <StaggerContainer>
+            <div style={{ maxWidth: '760px', marginBottom: '48px' }}>
+              <motion.p variants={staggerChild} style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '11px',
+                fontWeight: 500,
+                color: ACCENT,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                marginBottom: '24px',
+              }}>
+                Visual Language
+              </motion.p>
+              <motion.h3 variants={staggerChild} style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.75rem, 3.25vw, 2.5rem)',
+                fontWeight: 700,
+                letterSpacing: '-0.03em',
+                lineHeight: 1.15,
+                color: 'var(--text-primary)',
+                marginBottom: '24px',
+              }}>
+                The system-level decisions that don&rsquo;t fit in a card.
+              </motion.h3>
+              <motion.p variants={staggerChild} style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '1.0625rem',
+                fontWeight: 300,
+                lineHeight: 1.7,
+                color: 'var(--text-secondary)',
+              }}>
+                Keel is a review tool. Every surface-level choice — type, color, spacing, motion — is answering the same question: does this help or hinder the reviewer? Four principles shaped the visual language end-to-end.
+              </motion.p>
+            </div>
+
+            <motion.div
+              variants={staggerChild}
+              className="keel-visual-principles"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '24px',
+              }}
+            >
+              {[
+                {
+                  label: 'Typography',
+                  heading: 'Mono for facts. Body for claims.',
+                  body: 'Numbers, tokens, status labels, severities, IDs — anything machine-truth — gets a monospaced face. Narrative copy gets a humanist sans. The typographic split is a trust signal: the mono items are what Keel found, the body items are how I chose to frame it.',
+                },
+                {
+                  label: 'Color',
+                  heading: 'Monochrome page. One accent. One severity scale.',
+                  body: 'The page is grayscale because it is a log. Dark blue marks moments of decision — the accent appears on accepted, pending, ship, and approve. Red/orange/yellow belong to drift severity alone. No color gets spent on decoration because color is a finite resource here, not a palette.',
+                },
+                {
+                  label: 'Density',
+                  heading: 'Review is dense. Decision is sparse.',
+                  body: 'The dashboard and parity audit show as much as fits — the user is scanning for outliers. The Improver proposal and policy config are spacious — the user is making a call. Density maps to cognitive load, not to aesthetic preference. A sparse review surface would be an anti-feature.',
+                },
+                {
+                  label: 'Motion',
+                  heading: 'Motion only where it maps to information.',
+                  body: 'The scroll-scrubbed demo on this page compresses a minute of product interaction into twenty seconds — motion as time compression. The decision cards expand under user control — motion as agency. Nothing else on either page moves. Motion borrowed from decoration is motion that has to be forgiven later.',
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="keel-principle-card"
+                  style={{
+                    padding: '32px',
+                    backgroundColor: 'var(--bg-card)',
+                    borderRadius: '12px',
+                    border: '1px solid var(--border)',
+                  }}
+                >
+                  <p style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.6875rem',
+                    fontWeight: 500,
+                    color: ACCENT,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    marginBottom: '16px',
+                  }}>
+                    {item.label}
+                  </p>
+                  <h4 style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.125rem',
+                    fontWeight: 600,
+                    letterSpacing: '-0.02em',
+                    lineHeight: 1.3,
+                    color: 'var(--text-primary)',
+                    marginBottom: '12px',
+                  }}>
+                    {item.heading}
+                  </h4>
+                  <p style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '14.5px',
+                    fontWeight: 400,
+                    lineHeight: 1.65,
+                    color: 'var(--text-secondary)',
+                  }}>
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
           </StaggerContainer>
         </section>
 
@@ -1912,6 +2045,13 @@ export default function KeelCaseStudy() {
           .keel-metrics-grid {
             grid-template-columns: repeat(2, 1fr) !important;
             gap: 12px !important;
+          }
+          .keel-visual-principles {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+          .keel-principle-card {
+            padding: 24px !important;
           }
           .keel-hero-tldr {
             font-size: 0.6875rem !important;
