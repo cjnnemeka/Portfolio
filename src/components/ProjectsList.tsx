@@ -9,7 +9,7 @@ import { asset } from '@/lib/utils'
 export default function ProjectsList() {
   return (
     <section id="work" className="responsive-padding" style={{
-      padding: '160px 48px 120px 48px',
+      padding: '120px 48px 80px 48px',
     }}>
       {/* Section header */}
       <motion.div

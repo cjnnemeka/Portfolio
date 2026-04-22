@@ -42,10 +42,10 @@ export default function About() {
   return (
     <>
       <Header />
-      <main style={{ paddingTop: '160px' }}>
+      <main style={{ paddingTop: '120px' }}>
 
         {/* ━━━ HERO ━━━ */}
-        <section className="responsive-padding" style={{ padding: '0 48px 120px 48px' }}>
+        <section className="responsive-padding" style={{ padding: '0 48px 80px 48px' }}>
           {/* Hero flex: text left, photo right */}
           <div className="responsive-flex" style={{
             display: 'flex',
@@ -275,7 +275,7 @@ export default function About() {
         <div style={{
           height: '1px',
           backgroundColor: 'var(--border)',
-          margin: '120px 0',
+          margin: '72px 0',
         }} />
 
         {/* ━━━ SKILLS & TOOLS ━━━ */}
@@ -392,7 +392,7 @@ export default function About() {
         <div style={{
           height: '1px',
           backgroundColor: 'var(--border)',
-          margin: '120px 0',
+          margin: '72px 0',
         }} />
 
         {/* ━━━ EXPERIENCE ━━━ */}

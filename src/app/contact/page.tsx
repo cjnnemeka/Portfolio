@@ -81,7 +81,7 @@ export default function Contact() {
           display: 'grid',
           gridTemplateColumns: '2fr 3fr',
           gap: '80px',
-          padding: '160px 48px 120px 48px',
+          padding: '120px 48px 80px 48px',
           alignItems: 'start',
         }}>
 

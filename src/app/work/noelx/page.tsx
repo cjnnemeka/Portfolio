@@ -208,7 +208,7 @@ function Divider() {
     <div style={{
       height: '1px',
       backgroundColor: 'var(--border)',
-      margin: '120px 0',
+      margin: '72px 0',
     }} />
   )
 }
@@ -516,7 +516,7 @@ export default function NoelXCaseStudy() {
     <>
       <Header />
       <ScrollProgress />
-      <main style={{ paddingTop: '160px' }}>
+      <main style={{ paddingTop: '120px' }}>
 
         {/* ━━━ HERO ━━━ */}
         <section className="responsive-padding" style={{ padding: '0 48px 80px 48px' }}>

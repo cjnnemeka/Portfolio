@@ -207,7 +207,7 @@ function Divider() {
       style={{
         height: '1px',
         backgroundColor: 'var(--border)',
-        margin: '120px 0',
+        margin: '72px 0',
       }}
     />
   )
@@ -375,9 +375,10 @@ function FixedSectionIndex({ heroInView }: { heroInView: boolean }) {
   return (
     <nav
       aria-label="Section navigation"
+      className="keel-section-nav"
       style={{
         position: 'fixed',
-        left: '32px',
+        left: '28px',
         top: '50%',
         transform: 'translateY(-50%)',
         zIndex: 80,
@@ -395,11 +396,11 @@ function FixedSectionIndex({ heroInView }: { heroInView: boolean }) {
             onClick={() => handleClick(id)}
             onMouseEnter={() => setHoveredIdx(i)}
             onMouseLeave={() => setHoveredIdx(null)}
+            title={SECTION_LABELS[i]}
             aria-label={`Jump to ${SECTION_LABELS[i]}`}
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '16px',
               background: 'none',
               border: 'none',
               padding: 0,
@@ -408,36 +409,19 @@ function FixedSectionIndex({ heroInView }: { heroInView: boolean }) {
           >
             <span
               style={{
-                width: '8px',
-                height: '8px',
+                width: isActive ? '10px' : '8px',
+                height: isActive ? '10px' : '8px',
                 borderRadius: '50%',
                 flexShrink: 0,
                 backgroundColor: isActive
                   ? ACCENT
                   : isHovered
-                    ? 'rgba(29, 78, 216, 0.5)'
+                    ? 'var(--text-muted)'
                     : 'transparent',
-                border: isActive ? 'none' : '1px solid rgba(255, 255, 255, 0.2)',
+                border: isActive ? 'none' : `1px solid ${isHovered ? 'var(--text-secondary)' : 'var(--border-hover)'}`,
                 transition: reducedMotion ? 'none' : 'all 200ms ease',
               }}
             />
-            <span
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: '11px',
-                fontWeight: 500,
-                color: 'var(--text-primary)',
-                textTransform: 'uppercase',
-                letterSpacing: '0.1em',
-                opacity: isHovered ? 1 : 0,
-                transform: reducedMotion ? 'none' : `translateX(${isHovered ? '0' : '-4px'})`,
-                transition: reducedMotion ? 'opacity 150ms ease' : 'opacity 150ms ease, transform 200ms ease',
-                whiteSpace: 'nowrap',
-                pointerEvents: 'none',
-              }}
-            >
-              {SECTION_LABELS[i]}
-            </span>
           </button>
         )
       })}
@@ -996,7 +980,7 @@ export default function KeelCaseStudy() {
       <ScrollProgress />
       <StickyThesisBar designQuestionRef={designQuestionRef} />
       <FixedSectionIndex heroInView={heroInView} />
-      <main style={{ paddingTop: '160px' }}>
+      <main style={{ paddingTop: '120px' }}>
 
         {/* ━━━ HERO ━━━ */}
         <section ref={heroRef} className="responsive-padding keel-hero-section" style={{ padding: '0 48px 80px 48px' }}>
@@ -1245,7 +1229,7 @@ export default function KeelCaseStudy() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
           className="responsive-padding keel-hero-image-section"
-          style={{ padding: '0 48px 120px 48px' }}
+          style={{ padding: '0 48px 72px 48px' }}
         >
           <ParallaxImage
             label="Keel dashboard showing drift detection for the Meridian design system"
@@ -1255,7 +1239,7 @@ export default function KeelCaseStudy() {
         </motion.section>
 
         {/* ━━━ IN PLAIN ENGLISH ━━━ */}
-        <section className="responsive-padding keel-plain-english" style={{ padding: '0 48px 120px 48px' }}>
+        <section className="responsive-padding keel-plain-english" style={{ padding: '0 48px 72px 48px' }}>
           <StaggerContainer>
             <div style={{ maxWidth: '760px' }}>
               <motion.p variants={staggerChild} style={{
@@ -1317,7 +1301,7 @@ export default function KeelCaseStudy() {
                   color: 'var(--text-secondary)',
                   maxWidth: '680px',
                 }}>
-                  AI-generated design system code looks right at a glance and is wrong in ways that take twenty minutes to find. An invented shadow value that reads plausibly but isn&rsquo;t in the foundation. Off-scale spacing — <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.95em', color: 'var(--text-primary)', background: 'rgba(255,255,255,0.04)', padding: '1px 6px', borderRadius: '4px' }}>p-7</code> when the scale is 4/8/12/16/20/24. A primitive used where a semantic token should be. A token name that sounds correct and doesn&rsquo;t exist.
+                  AI-generated design system code looks right at a glance and is wrong in ways that take twenty minutes to find. An invented shadow value that reads plausibly but isn&rsquo;t in the foundation. Off-scale spacing — <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.95em', color: 'var(--text-primary)', background: 'var(--bg-secondary)', padding: '1px 6px', borderRadius: '4px' }}>p-7</code> when the scale is 4/8/12/16/20/24. A primitive used where a semantic token should be. A token name that sounds correct and doesn&rsquo;t exist.
                 </motion.p>
 
                 <motion.p variants={staggerChild} style={{

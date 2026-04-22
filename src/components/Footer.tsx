@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="responsive-padding" style={{
-      padding: '160px 48px 40px 48px',
+      padding: '120px 48px 40px 48px',
     }}>
       {/* CTA section */}
       <motion.div
@@ -21,7 +21,7 @@ export default function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        style={{ marginBottom: '160px' }}
+        style={{ marginBottom: '96px' }}
       >
         <p style={{
           fontFamily: 'var(--font-mono)',

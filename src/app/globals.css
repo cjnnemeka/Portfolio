@@ -75,7 +75,7 @@ a {
 
   /* Reduce top padding on main content */
   main {
-    padding-top: 100px !important;
+    padding-top: 80px !important;
   }
 
   /* Footer */
@@ -168,5 +168,10 @@ a {
   .lightbox-expanded {
     max-width: 95vw !important;
     max-height: 88vh !important;
+  }
+
+  /* Keel section nav: hide below 1280px to prevent overlap with content. */
+  .keel-section-nav {
+    display: none !important;
   }
 }
