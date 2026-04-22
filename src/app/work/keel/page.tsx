@@ -2082,6 +2082,29 @@ export default function KeelCaseStudy() {
                 letterSpacing: '0.1em',
                 marginBottom: '20px',
               }}>
+                The Design Wrong Turn
+              </p>
+              <p style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '1.0625rem',
+                fontWeight: 300,
+                lineHeight: 1.7,
+                color: 'var(--text-secondary)',
+              }}>
+                The first version of the drift dashboard was sparse — three rows visible before scroll, one highlighted violation per card, generous whitespace. It looked correct by every design principle I hold. It felt wrong the moment I spent a day working inside it. Three rows means three violations visible at a time in a tool designed for someone reviewing fifteen AI-authored pull requests daily. The user&rsquo;s first question isn&rsquo;t &ldquo;what is this violation?&rdquo; — it&rsquo;s &ldquo;is there anything urgent in this batch?&rdquo; Sparse made that question require scrolling. The dense rebuild — ten rows visible, severity inline with the token name, compact row height — reads as information. The sparse version read as elegance. For a review tool, information is the product. Minimalism in a review surface is hostility wearing a tasteful coat.
+              </p>
+            </motion.div>
+
+            <motion.div variants={staggerChild} style={{ maxWidth: '720px', marginTop: '64px' }}>
+              <p style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '11px',
+                fontWeight: 500,
+                color: ACCENT,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                marginBottom: '20px',
+              }}>
                 What I&rsquo;d Do Differently
               </p>
               <p style={{

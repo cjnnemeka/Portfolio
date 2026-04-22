@@ -920,6 +920,18 @@ export default function NoelXCaseStudy() {
                   imageSrc="/images/noelx/campaign-detail.png"
                 />
               </motion.div>
+              <motion.div variants={staggerChild}>
+                <DecisionCard
+                  number="04"
+                  title="Three-Layer Architecture as Lifecycle Infrastructure"
+                  accentColor="#D4A843"
+                  challenge="The obvious MVP is a one-shot reactivation blast — send a campaign to every lapsed patient and see who books. Early validation showed this works once. Practices running a single reactivation campaign get a spike in week one, then revert to baseline within 60 days. One-time recovery doesn't prevent the next cohort from lapsing."
+                  decision="Three-layer architecture: Backlog Recovery reactivates patients already lapsed — immediate ROI, targeting the 150+ dormant patients already in the database. Lapse Interception catches patients before they cross the 90-day threshold — automated, running continuously as new patients age. Post-Visit Retention follows up after every appointment — satisfaction check, rebooking prompt, next-treatment recommendation. Each layer activates as the previous one saturates."
+                  result="NoelX is always doing work, not responding to commands. A practice running for six months has Layer 1 winding down, Layer 2 running continuously, and Layer 3 building a retention habit after every visit. Churn from 'we've already recovered everyone' becomes structurally impossible — the system is always ahead of the next cohort. The three-layer design is what makes the $3K/month infrastructure pricing defensible: it's not a campaign spend, it's a system that compounds."
+                  imageLabel="NoelX — Three-Layer Patient Retention System"
+                  imageSrc="/images/noelx/dashboard-overview.png"
+                />
+              </motion.div>
             </div>
 
             {/* Subtle bridge link to design system */}

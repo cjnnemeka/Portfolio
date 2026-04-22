@@ -825,6 +825,18 @@ export default function NexoraCaseStudy() {
                   accentColor="#E8614D"
                 />
               </motion.div>
+              <motion.div variants={staggerChild}>
+                <DecisionCard
+                  number="04"
+                  title="Zero-Config Start as Competitive Commitment"
+                  challenge="Every CRM competitor offers deep customization — custom pipeline stages, custom fields, custom automations. This is marketed as flexibility. In practice, it's the reason 78% of small team adoptions fail within 90 days: the product refuses to be useful until it's been extensively configured, and small teams don't have a RevOps person to do that work."
+                  decision="Designed Nexora with a working default state for every view. Pipeline stages are pre-set (Discovery → Qualified → In Conversation → Closed). Dashboard cards populate with sample data from day one. The onboarding flow has three actions total — test invoice, test proposal, configure payments — and the full product is usable after all three. Customization exists but is never required to get value in the first session."
+                  result="The design commitment shapes every IA decision: if a feature requires setup to understand, it was either removed or pre-configured. Small teams don't want to choose their pipeline stages — they want a pipeline that reflects how they already sell, which is almost always the same four stages. Nexora's competitive position is not a feature list. It's a promise: useful on day one, not after a week of setup."
+                  imageLabel="Nexora — Onboarding with Pre-Populated Sample Data"
+                  imageSrc="/images/Nexora/Frame 380.png"
+                  accentColor="#E8614D"
+                />
+              </motion.div>
             </div>
           </StaggerContainer>
         </section>
@@ -1183,6 +1195,13 @@ export default function NexoraCaseStudy() {
               <motion.div variants={staggerChild}>
                 <SectionTitle text="Outcome & Reflection" />
               </motion.div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <motion.div variants={staggerChild}>
+                  <BodyText>
+                    Nexora is a concept-stage platform design validated through competitive analysis of six CRM tools and synthesis of small-team sales research. The central design thesis — that small teams fail at CRM adoption because of configuration burden, not capability gaps — is supported by published adoption data. Every major design decision traces back to one failure mode in the competitive landscape: HubSpot and Pipedrive are powerful, but they are built for teams with the operational bandwidth to configure and maintain them. Nexora is built for teams that don't have that bandwidth and shouldn't need it.
+                  </BodyText>
+                </motion.div>
+              </div>
             </div>
 
             {/* Key metrics */}
@@ -1193,10 +1212,10 @@ export default function NexoraCaseStudy() {
               marginBottom: '48px',
             }}>
               {[
-                { metric: '9', label: 'Complete flows' },
-                { metric: '3', label: 'Sales · Leads · Onboarding' },
-                { metric: '3', label: 'Connections · Finance · Misc' },
-                { metric: '2', label: 'Invoices · Proposals (shared)' },
+                { metric: '78%', label: 'CRM abandonment rate addressed' },
+                { metric: '3→1', label: 'Tools consolidated' },
+                { metric: '6', label: 'CRMs analyzed in research' },
+                { metric: '0', label: 'Config required to start' },
               ].map((item, idx) => (
                 <div key={idx} style={{
                   padding: '32px',
@@ -1249,7 +1268,7 @@ export default function NexoraCaseStudy() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {[
                   'Conduct usability testing with 5–8 small sales teams to validate the onboarding flow reduces setup abandonment. The progressive disclosure hypothesis needs real-world data.',
-                  'Design a mobile-responsive version of the kanban board. Small team sales reps work from their phones — the current desktop kanban doesn\'t translate to touch interaction without rethinking the card density.',
+                  'A touch-native companion for the kanban board is a deliberate stage-2 problem. Sales reps work from their phones, but a touch-optimized pipeline card interaction is a different design problem from the desktop layout — different density, different tap targets, different navigation model. The desktop-first design is the right starting constraint for V1. Mobile is scoped to V2 specifically to avoid designing for two interaction models simultaneously before the core flows are validated.',
                   'Add a deal velocity metric to the Leads dashboard — not just where deals are in the pipeline, but how long they\'ve been sitting at each stage. Stale deals are the silent killer of small team revenue.',
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>

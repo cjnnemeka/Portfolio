@@ -826,6 +826,18 @@ export default function ClovrCaseStudy() {
                   accentColor={ACCENT}
                 />
               </motion.div>
+              <motion.div variants={staggerChild}>
+                <DecisionCard
+                  number="04"
+                  title="Mid-Market Positioning Over Enterprise Feature Parity"
+                  challenge="The five incumbent TPM platforms (Vividly, CPGvision, Promomash, HighRadius, Cresicor) all compete on feature completeness for enterprise accounts. The instinct when designing a new entrant is to match their feature lists while making the UI cleaner. That approach produces a better-looking product positioned identically — competing for the same $30K+ contracts against entrenched vendors."
+                  decision="Designed Clovr explicitly for the $10M–$200M revenue tier. This meant deliberately cutting features that mid-market teams don't have the headcount to operate — advanced forecasting models, multi-org hierarchies, broker portals — and investing depth in the three workflows where mid-market teams lose the most money: deduction validation, dispute management, and promotion calendar clarity. Every enterprise feature excluded funded a mid-market usability improvement."
+                  result="The competitive gap isn't capability — it's operational fit. A five-person CPG finance team doesn't need a system that requires a dedicated TPM administrator. The mid-market tier is currently served by spreadsheets and ERP exports because existing tools are overbuilt for their needs. Clovr's information architecture is organized around how a small finance team actually divides work, not how an enterprise license structure maps to a software seat."
+                  imageLabel="Clovr — Checks Database Overview"
+                  imageSrc="/images/Clovr/Checks Database.png"
+                  accentColor={ACCENT}
+                />
+              </motion.div>
             </div>
           </StaggerContainer>
         </section>
@@ -1064,7 +1076,7 @@ export default function ClovrCaseStudy() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <motion.div variants={staggerChild}>
                   <BodyText>
-                    Clovr represents a comprehensive design exploration into one of the most overlooked pain points in CPG finance — trade promotion deduction management. The platform demonstrates how thoughtful information architecture and data-dense UI patterns can transform a manual, error-prone workflow into a streamlined recovery operation.
+                    Clovr is a validated platform design for a category with consolidation opportunity. The five incumbent TPM tools compete exclusively for enterprise accounts at $30K–$200K/year. The $10M–$200M revenue tier — mid-market CPG brands — has no purpose-built option and is currently served by spreadsheets and ERP exports. Every design decision was made against a specific failure mode in the competitive landscape: fragmented data across four to six systems per deduction, invisible patterns in retailer over-deduction behavior, and dispute windows that expire while teams are still manually validating claims they could have disputed weeks earlier.
                   </BodyText>
                 </motion.div>
               </div>
@@ -1078,10 +1090,10 @@ export default function ClovrCaseStudy() {
               marginBottom: '48px',
             }}>
               {[
-                { metric: '7', label: 'Screens designed' },
-                { metric: '3', label: 'Dashboard categories' },
-                { metric: '2', label: 'Timeline views' },
-                { metric: '5', label: 'Modal workflows' },
+                { metric: '<10', label: 'Min per deduction validation' },
+                { metric: '$750K', label: 'Annual recovery target' },
+                { metric: '5', label: 'TPM competitors analyzed' },
+                { metric: '4', label: 'Finance workflows unified' },
               ].map((item) => (
                 <div key={item.label} style={{
                   padding: '32px',
@@ -1136,6 +1148,7 @@ export default function ClovrCaseStudy() {
                   'Conduct usability testing with 3–5 CPG finance teams to validate whether the three-panel deduction layout actually reduces validation time. The 45-to-10 minute estimate is based on workflow analysis, not measured task completion.',
                   'Design an automated deduction matching flow using AI suggestions — the current dispute modal requires manual reason selection, but pattern detection could pre-fill the most likely dispute reason based on historical data for that retailer and promotion type.',
                   'Build a deduction aging dashboard showing how long each open claim has been sitting relative to the dispute window deadline. Time-pressure visualization would help teams prioritize claims about to expire over recently received ones.',
+                  'Run structured usability sessions with 3–5 CPG finance teams to validate the three-panel deduction layout under real workflow conditions. The 45-to-under-10-minute estimate is grounded in workflow analysis, but measured task completion data would either confirm the design or reveal where the layout breaks down at speed.',
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                     <span style={{
