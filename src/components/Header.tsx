@@ -28,7 +28,7 @@ export default function Header() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: 'rgba(5, 5, 5, 0.85)',
+        backgroundColor: 'rgba(250, 250, 249, 0.85)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
       }}
@@ -40,7 +40,7 @@ export default function Header() {
         letterSpacing: '-0.01em',
         color: 'var(--text-primary)',
       }}>
-        Michael Ihenacho
+        Cj Nnemeka
       </Link>
 
       <nav style={{ display: 'flex', gap: '36px', alignItems: 'center' }}>

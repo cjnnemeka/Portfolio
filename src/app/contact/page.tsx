@@ -166,7 +166,7 @@ export default function Contact() {
                   Email
                 </p>
                 <a
-                  href="mailto:michaelihenacho3@gmail.com"
+                  href="mailto:cjnnemeka@gmail.com"
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: '0.875rem',
@@ -177,7 +177,7 @@ export default function Contact() {
                   onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent)')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-primary)')}
                 >
-                  michaelihenacho3@gmail.com
+                  cjnnemeka@gmail.com
                 </a>
               </motion.div>
 
@@ -199,7 +199,7 @@ export default function Contact() {
                   fontWeight: 400,
                   color: 'var(--text-primary)',
                 }}>
-                  US → Ireland
+                  United States
                 </p>
               </motion.div>
 
@@ -386,10 +386,10 @@ export default function Contact() {
                   }}>
                     Something went wrong. Try emailing me directly at{' '}
                     <a
-                      href="mailto:michaelihenacho3@gmail.com"
+                      href="mailto:cjnnemeka@gmail.com"
                       style={{ color: '#E8614D', textDecoration: 'underline' }}
                     >
-                      michaelihenacho3@gmail.com
+                      cjnnemeka@gmail.com
                     </a>
                     .
                   </p>

@@ -35,7 +35,7 @@ export default function Footer() {
           Let's talk
         </p>
         <a
-          href="mailto:michaelihenacho3@gmail.com"
+          href="mailto:cjnnemeka@gmail.com"
           onMouseEnter={() => setEmailHovered(true)}
           onMouseLeave={() => setEmailHovered(false)}
           style={{
@@ -49,7 +49,7 @@ export default function Footer() {
             display: 'inline-block',
           }}
         >
-          michaelihenacho3@gmail.com
+          cjnnemeka@gmail.com
         </a>
       </motion.div>
 
@@ -67,7 +67,7 @@ export default function Footer() {
           fontWeight: 400,
           color: 'var(--text-muted)',
         }}>
-          © {new Date().getFullYear()} Michael Ihenacho
+          © {new Date().getFullYear()} Cj Nnemeka
         </p>
 
         <div style={{ display: 'flex', gap: '28px' }}>

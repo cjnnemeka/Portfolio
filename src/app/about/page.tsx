@@ -69,7 +69,7 @@ export default function About() {
                     color: 'var(--text-primary)',
                   }}
                 >
-                  Michael Ihenacho
+                  Cj Nnemeka
                 </motion.h1>
               </div>
               <div style={{ overflow: 'hidden' }}>
@@ -132,7 +132,7 @@ export default function About() {
             >
               <img
                 src="/images/pfp/michael.jpeg"
-                alt="Michael Ihenacho"
+                alt="Cj Nnemeka"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 15%', borderRadius: '12px' }}
               />
             </motion.div>
@@ -154,7 +154,7 @@ export default function About() {
           >
             {[
               { label: 'Citizenship', value: 'EU Citizen (Italian Passport)', accent: true },
-              { label: 'Location', value: 'US → Ireland', accent: false },
+              { label: 'Location', value: 'United States', accent: false },
               { label: 'Availability', value: 'Immediately', accent: false },
             ].map((item) => (
               <div key={item.label}>
