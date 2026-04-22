@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { asset } from '@/lib/utils'
 
 const staggerChild = {
   hidden: { opacity: 0, y: 24 },
@@ -131,7 +132,7 @@ export default function About() {
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}
             >
               <img
-                src="/images/pfp/michael.jpeg"
+                src={asset("/images/pfp/michael.jpeg")}
                 alt="Cj Nnemeka"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 15%', borderRadius: '12px' }}
               />

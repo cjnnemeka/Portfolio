@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { projects } from '@/data/projects'
+import { asset } from '@/lib/utils'
 
 export default function ProjectsList() {
   return (
@@ -106,7 +107,7 @@ function ProjectRow({ project, index }: { project: typeof projects[number]; inde
         }}>
           {project.thumbnail ? (
             <img
-              src={project.thumbnail}
+              src={asset(project.thumbnail)}
               alt={project.title}
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               draggable={false}

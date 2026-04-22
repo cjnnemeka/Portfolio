@@ -125,7 +125,7 @@ function ParallaxImage({ label, aspect = '16 / 10', src }: { label: string; aspe
       >
         <motion.div style={{ y }}>
           <img
-            src={src}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${src}`}
             alt={label}
             style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '12px' }}
           />

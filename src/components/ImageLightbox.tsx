@@ -9,7 +9,10 @@ interface ImageLightboxProps {
   className?: string
 }
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 export default function ImageLightbox({ src, alt, style, className }: ImageLightboxProps) {
+  src = src.startsWith('http') ? src : `${base}${src}`
   const [open, setOpen] = useState(false)
   const [visible, setVisible] = useState(false)
 
