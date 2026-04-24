@@ -73,11 +73,6 @@ a {
     gap: 20px !important;
   }
 
-  /* Reduce top padding on main content */
-  main {
-    padding-top: 80px !important;
-  }
-
   /* Footer */
   footer {
     padding: 80px 20px 32px 20px !important;
