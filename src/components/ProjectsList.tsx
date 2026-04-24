@@ -58,14 +58,6 @@ export default function ProjectsList() {
         ))}
       </div>
 
-      <style>{`
-        @media (max-width: 768px) {
-          .projects-grid {
-            grid-template-columns: 1fr !important;
-            gap: 32px !important;
-          }
-        }
-      `}</style>
     </section>
   )
 }

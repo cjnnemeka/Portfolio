@@ -99,6 +99,11 @@ a {
     gap: 20px !important;
   }
 
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
   .responsive-grid-3 {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
