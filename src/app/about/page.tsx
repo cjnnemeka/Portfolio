@@ -154,7 +154,6 @@ export default function About() {
             }}
           >
             {[
-              { label: 'Citizenship', value: 'EU Citizen (Italian Passport)', accent: true },
               { label: 'Location', value: 'United States', accent: false },
               { label: 'Availability', value: 'Immediately', accent: false },
             ].map((item) => (
