@@ -21,17 +21,17 @@ export default function ProjectsList() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'baseline',
-          marginBottom: '80px',
+          marginBottom: '56px',
           paddingBottom: '20px',
           borderBottom: '1px solid var(--border)',
         }}
       >
         <h2 style={{
           fontFamily: 'var(--font-display)',
-          fontSize: '0.8125rem',
-          fontWeight: 500,
-          color: 'var(--text-secondary)',
-          letterSpacing: '-0.01em',
+          fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
+          fontWeight: 700,
+          color: 'var(--text-primary)',
+          letterSpacing: '-0.03em',
         }}>
           Selected Work
         </h2>
@@ -45,62 +45,62 @@ export default function ProjectsList() {
         </span>
       </motion.div>
 
-      {/* Project grid — 2×2 desktop, single column mobile */}
-      <div
-        className="responsive-grid-2"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          columnGap: '48px',
-          rowGap: '0px',
-        }}
+      {/* Project grid — 2 columns desktop, 1 column mobile */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: '48px 40px',
+      }}
+        className="projects-grid"
       >
         {projects.map((project, index) => (
-          <ProjectRow key={project.slug} project={project} index={index} />
+          <ProjectCard key={project.slug} project={project} index={index} />
         ))}
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .projects-grid {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }
 
-function ProjectRow({ project, index }: { project: typeof projects[number]; index: number }) {
+function ProjectCard({ project, index }: { project: typeof projects[number]; index: number }) {
   const [hovered, setHovered] = useState(false)
 
   return (
     <Link href={`/work/${project.slug}`} style={{ textDecoration: 'none' }}>
       <motion.div
-        initial={{ opacity: 0, y: 60 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: '-80px' }}
         transition={{
-          duration: 0.9,
+          duration: 0.8,
           ease: [0.16, 1, 0.3, 1],
           delay: index * 0.08,
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="responsive-grid"
         style={{
-          display: 'grid',
-          gridTemplateColumns: '1.1fr 1fr',
-          gap: '64px',
-          alignItems: 'center',
-          padding: '48px 0',
-          paddingLeft: hovered ? '16px' : '0px',
-          borderBottom: '1px solid var(--border)',
           cursor: 'pointer',
-          transition: 'padding-left 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+          transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
+          transition: 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
       >
-        {/* Image thumbnail or placeholder */}
+        {/* Thumbnail */}
         <div style={{
           aspectRatio: '16 / 10',
-          backgroundColor: hovered ? 'var(--bg-card-hover)' : 'var(--bg-card)',
-          borderRadius: '12px',
+          backgroundColor: 'var(--bg-card)',
+          borderRadius: '16px',
           overflow: 'hidden',
           border: `1px solid ${hovered ? 'var(--border-hover)' : 'var(--border)'}`,
-          transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
-          transform: hovered ? 'scale(1.02)' : 'scale(1)',
+          transition: 'border-color 0.4s ease',
+          marginBottom: '24px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -109,7 +109,13 @@ function ProjectRow({ project, index }: { project: typeof projects[number]; inde
             <img
               src={asset(project.thumbnail)}
               alt={project.title}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                transform: hovered ? 'scale(1.03)' : 'scale(1)',
+                transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              }}
               draggable={false}
             />
           ) : (
@@ -128,15 +134,10 @@ function ProjectRow({ project, index }: { project: typeof projects[number]; inde
         {/* Info */}
         <div>
           {/* Index + year */}
-          <div style={{
-            display: 'flex',
-            gap: '20px',
-            marginBottom: '16px',
-          }}>
+          <div style={{ display: 'flex', gap: '16px', marginBottom: '10px' }}>
             <span style={{
               fontFamily: 'var(--font-mono)',
               fontSize: '0.625rem',
-              fontWeight: 500,
               color: 'var(--text-muted)',
               letterSpacing: '0.08em',
             }}>
@@ -145,7 +146,6 @@ function ProjectRow({ project, index }: { project: typeof projects[number]; inde
             <span style={{
               fontFamily: 'var(--font-mono)',
               fontSize: '0.625rem',
-              fontWeight: 500,
               color: 'var(--text-muted)',
               letterSpacing: '0.08em',
             }}>
@@ -156,12 +156,12 @@ function ProjectRow({ project, index }: { project: typeof projects[number]; inde
           {/* Title */}
           <h3 style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(2rem, 3.5vw, 3.25rem)',
+            fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
             fontWeight: 700,
-            letterSpacing: '-0.035em',
+            letterSpacing: '-0.03em',
             lineHeight: 1.1,
             color: hovered ? project.color : 'var(--text-primary)',
-            transition: 'color 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+            transition: 'color 0.4s ease',
             marginBottom: '8px',
           }}>
             {project.title}
@@ -170,28 +170,25 @@ function ProjectRow({ project, index }: { project: typeof projects[number]; inde
           {/* Subtitle */}
           <p style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '1rem',
-            fontWeight: 400,
+            fontSize: '0.9375rem',
             color: 'var(--text-secondary)',
             lineHeight: 1.5,
-            marginBottom: '28px',
+            marginBottom: '16px',
           }}>
             {project.subtitle}
           </p>
 
           {/* Tags */}
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
             {project.tags.map((tag) => (
               <span key={tag} style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: '0.625rem',
-                fontWeight: 400,
-                color: hovered ? 'var(--text-secondary)' : 'var(--text-muted)',
-                padding: '5px 12px',
-                border: `1px solid ${hovered ? 'var(--border-hover)' : 'var(--border)'}`,
+                fontSize: '0.5625rem',
+                color: 'var(--text-muted)',
+                padding: '4px 10px',
+                border: '1px solid var(--border)',
                 borderRadius: '100px',
                 letterSpacing: '0.04em',
-                transition: 'all 0.5s ease',
               }}>
                 {tag}
               </span>
