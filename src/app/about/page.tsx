@@ -244,29 +244,6 @@ export default function About() {
               </p>
             </motion.div>
 
-            {/* Block 3: WHAT I'M LOOKING FOR */}
-            <motion.div variants={staggerChild} style={{ maxWidth: '720px', marginTop: '56px' }}>
-              <p style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.625rem',
-                fontWeight: 500,
-                color: 'var(--accent)',
-                textTransform: 'uppercase',
-                letterSpacing: '0.12em',
-                marginBottom: '16px',
-              }}>
-                What I&rsquo;m Looking For
-              </p>
-              <p style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '1.125rem',
-                fontWeight: 400,
-                lineHeight: 1.7,
-                color: 'var(--text-primary)',
-              }}>
-                A product design role in Western Europe where I can take ownership of real problems and work closely with a team that cares about what they ship. I have an Italian passport, so no work permit or sponsorship needed. Available to start within a few weeks.
-              </p>
-            </motion.div>
           </StaggerContainer>
         </section>
 
