@@ -132,7 +132,7 @@ export default function About() {
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}
             >
               <img
-                src={asset("/images/pfp/WhatsApp Image 2026-03-12 at 6.01.03 PM.jpeg")}
+                src={asset("/images/pfp/cj.jpeg")}
                 alt="Cj Nnemeka"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 15%', borderRadius: '12px' }}
               />
