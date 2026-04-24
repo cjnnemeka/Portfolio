@@ -221,7 +221,7 @@ export default function Contact() {
                   fontWeight: 400,
                 }}>
                   <a
-                    href="https://www.linkedin.com/in/michaelihenacho/"
+                    href="https://www.linkedin.com/in/cj-nnemeka-30a3063a7/"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
