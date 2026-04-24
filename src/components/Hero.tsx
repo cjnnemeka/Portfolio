@@ -30,8 +30,8 @@ const fadeIn = {
 
 export default function Hero() {
   const headlineLines = [
-    { text: 'I design products', weight: 700 },
-    { text: '& build them.', weight: 700 },
+    { text: 'I turn ambiguity', weight: 700 },
+    { text: 'into usable products.', weight: 700 },
   ]
 
   return (
