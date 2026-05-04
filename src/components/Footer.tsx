@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const links = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/cj-nnemeka-30a3063a7/' },
-  { label: 'CV', href: '/Michael_Ihenacho_CV.pdf' },
+  { label: 'CV', href: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/Columba_Nnemeka_CV.pdf` },
 ]
 
 export default function Footer() {
