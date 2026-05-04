@@ -801,7 +801,7 @@ function DemoLoopDesktop() {
             >
               <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                 <Image
-                  src={step.image}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${step.image}`}
                   alt={step.alt}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
@@ -916,7 +916,7 @@ function DemoLoopMobile() {
             }}
           >
             <Image
-              src={step.image}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${step.image}`}
               alt={step.alt}
               fill
               sizes="(max-width: 1023px) 100vw, 50vw"
@@ -1902,7 +1902,6 @@ export default function KeelCaseStudy() {
                 letterSpacing: '-0.03em',
                 lineHeight: 1.2,
                 color: 'var(--text-primary)',
-                maxWidth: '860px',
               }}
             >
               AI-generated design system output is unreliable in ways that are invisible at review speed. The tooling industry is shipping generation faster instead of solving review. Review is the frontier. That&rsquo;s the gap Keel sits in.
@@ -1913,7 +1912,6 @@ export default function KeelCaseStudy() {
               display: 'flex',
               flexDirection: 'column',
               gap: '24px',
-              maxWidth: '680px',
             }}>
               <p style={{
                 fontFamily: 'var(--font-body)',
